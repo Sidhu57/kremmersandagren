@@ -76,7 +76,7 @@ const Contact = () => {
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">Visit Us</h3>
                 <p className="text-sm text-muted-foreground">
-                  Pattukottai,<br />
+                  Trichy,<br />
                   Tamil Nadu, India
                 </p>
               </CardContent>
