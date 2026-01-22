@@ -92,7 +92,7 @@ const Contact = () => {
                   href="mailto:admin@kremmersandegrenfoundation.com" 
                   className="text-sm text-primary hover:underline"
                 >
-                  admin@kremmersandagrenfoundataion.com
+                  admin@kremmersandegrenfoundation.com
                 </a>
               </CardContent>
             </Card>
