@@ -28,22 +28,22 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background relative">
+    <div className="min-h-screen bg-background relative ">
       {/* Full Page Background Image */}
       <div className="fixed inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1920&h=1080&fit=crop"
           alt="Background"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover pb-24 md:pb-32"
         />
-        <div className="absolute inset-0 bg-background/[0.70]" />
+        <div className="absolute inset-0 bg-background/[0.70] pb-24 md:pb-32" />
       </div>
       
       <div className="relative z-10">
         <Navigation />
       
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-32">
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden ">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img
@@ -55,7 +55,7 @@ const Index = () => {
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in-up font-['Comic_Sans_MS',_'Comic_Sans',_cursive]">
+          <div className=" mt-12 max-w-4xl mx-auto text-center animate-fade-in-up font-['Comic_Sans_MS',_'Comic_Sans',_cursive]">
             <h1 className="text-2xl md:text-3xl font-bold mb-3 leading-tight bg-gradient-to-r from-foreground via-foreground/80 to-foreground/60 bg-clip-text text-transparent" style={{ fontFamily: "'Comic Sans MS', 'Comic Sans', cursive" }}>
               Kremmer Sandegren Foundation Pattukottai
             </h1>
@@ -75,9 +75,9 @@ const Index = () => {
       </section>
 
       {/* Causes Section */}
-      <section className="py-24 bg-gradient-to-b from-background to-primary/5">
+      <section className="pt-4 pb-24 bg-gradient-to-b from-background to-primary/5">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in">
+          <div className="text-center mb-2 animate-fade-in">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Our Focus Area
               </h2>
@@ -136,8 +136,8 @@ const Index = () => {
               <h2 className="text-2xl md:text-3xl font-bold mb-4">
                 Ready to Make a Difference?
               </h2>
-              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Join us in building self-reliant communities. Your support helps empower women, educate children, and create sustainable livelihoods in rural Tamil Nadu.
+              <p className="text-lg text-muted-foreground mb-8 max-w-4xl mx-auto">
+                Join us in building self-reliant communities.Your support helps empower women, educate children, and create sustainable livelihoods in rural TamilNadu.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/volunteer">
