@@ -79,12 +79,9 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Our Focus Areas
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Integrated development programs addressing women's empowerment, child development, health, sustainable agriculture, and community capacity building
-            </p>
-          </div>
+              Our Focus Area
+              </h2>
+        </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {causes.map((cause, index) => (

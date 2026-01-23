@@ -76,7 +76,9 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start space-x-2 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4 mt-1 text-primary flex-shrink-0" />
-                <span>Trichy, Tamil Nadu</span>
+                <a href="https://www.google.com/maps?q=Trichy,Tamil+Nadu" className="hover:text-primary transition-colors">
+                Trichy, Tamil Nadu
+                </a>
               </li>
               <li className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail className="w-4 h-4 text-primary flex-shrink-0" />
