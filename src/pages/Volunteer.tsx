@@ -6,8 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Heart, Users, Clock, Award } from "lucide-react";
+import { Heart, Users, Clock, Award, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
 
 const Volunteer = () => {
   const { toast } = useToast();
@@ -20,13 +21,37 @@ const Volunteer = () => {
   });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  e.preventDefault();
+   emailjs.send(
+    "service_ifktf7l",     // 🔁 put your Service ID
+    "template_qz5hhtl",    // 🔁 put your Template ID
+    {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      interest: formData.interest,
+      message: formData.message,
+    },
+    "CZTEGobLiON3JKAeu"      // 🔁 put your Public Key
+  )
+  .then(() => {
     toast({
-      title: "Application Submitted!",
-      description: "Thank you for your interest. We'll contact you soon.",
+      title: "Message Sent!",
+      description: "Thank you for reaching out. We'll respond within 24 hours.",
     });
-    setFormData({ name: "", email: "", phone: "", interest: "", message: "" });
-  };
+
+    setFormData({ name: "", email: "", phone: "", interest: "", message:"" });
+  })
+  .catch((error) => {
+    console.error("EmailJS Error:", error);
+    toast({
+      title: "Failed to send message",
+      description: "Please try again later.",
+      variant: "destructive",
+    });
+  });
+};
+
 
   const programs = [
     {
@@ -221,9 +246,10 @@ const Volunteer = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="interest">Area of Interest</Label>
+                    <Label htmlFor="interest">Area of Interest *</Label>
                     <Input
                       id="interest"
+                      required
                       value={formData.interest}
                       onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
                       placeholder="e.g., Education, Healthcare, Community"
@@ -231,9 +257,10 @@ const Volunteer = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="message">Why do you want to volunteer?</Label>
+                    <Label htmlFor="message">Why do you want to volunteer? *</Label>
                     <Textarea
                       id="message"
+                      required
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Tell us about your motivation and skills..."
