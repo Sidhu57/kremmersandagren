@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -19,13 +20,36 @@ const Contact = () => {
   });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  e.preventDefault();
+
+  emailjs.send(
+    "service_ifktf7l",     // 🔁 put your Service ID
+    "template_x71tkel",    // 🔁 put your Template ID
+    {
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    },
+    "CZTEGobLiON3JKAeu"      // 🔁 put your Public Key
+  )
+  .then(() => {
     toast({
       title: "Message Sent!",
       description: "Thank you for reaching out. We'll respond within 24 hours.",
     });
+
     setFormData({ name: "", email: "", subject: "", message: "" });
-  };
+  })
+  .catch((error) => {
+    console.error("EmailJS Error:", error);
+    toast({
+      title: "Failed to send message",
+      description: "Please try again later.",
+      variant: "destructive",
+    });
+  });
+};
 
   return (
     <div className="min-h-screen bg-background relative">
