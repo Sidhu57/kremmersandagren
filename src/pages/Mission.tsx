@@ -86,16 +86,8 @@ const Mission = () => {
       </section>
 
       {/* Mission Areas */}
-      <section className="py-20 bg-gradient-to-b from-background to-primary/5">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <Heart className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Our Focus Areas</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive programs designed to create lasting impact across communities
-            </p>
-          </div>
-
+      <section className="-mt-16 pb-20">
+        <div className="container mx-auto px-2">
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="border-none hover:shadow-xl transition-all">
               <CardContent className="p-8">
@@ -152,7 +144,7 @@ const Mission = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-20">
+      <section className="py-20 bg-gradient-to-b from-background to-primary/5">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <Users className="w-12 h-12 text-primary mx-auto mb-4" />

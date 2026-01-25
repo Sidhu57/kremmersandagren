@@ -99,7 +99,7 @@ const Contact = () => {
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">Visit Us</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-primary hover:underline">
                   Trichy,<br />
                   Tamil Nadu, India
                 </p>
@@ -142,7 +142,7 @@ const Contact = () => {
                   <Clock className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">Working Hours</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-primary hover:underline">
                   Mon - Fri: 9:00 AM - 6:00 PM<br />
                   Sat: 10:00 AM - 2:00 PM
                 </p>
