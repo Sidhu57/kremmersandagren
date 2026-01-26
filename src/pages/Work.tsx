@@ -86,7 +86,7 @@ const Work = () => {
         <Navigation />
       
       {/* Hero Section with Background Image */}
-      <section className="relative h-[40vh] flex items-center justify-center overflow-hidden pt-32">
+     <section className="relative h-[40vh] md:h-[60vh] flex items-start justify-center overflow-hidden pt-32 mt-6">
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1920&h=1080&fit=crop"
@@ -98,7 +98,7 @@ const Work = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
-            <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-foreground via-foreground/80 to-foreground/60 bg-clip-text text-transparent mb-6">
+           <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-foreground via-foreground/80 to-foreground/60 bg-clip-text text-transparent mb-6">
               Our Work
             </h1>
             <p className="text-xl text-foreground/90 leading-relaxed">
@@ -109,7 +109,7 @@ const Work = () => {
       </section>
 
       {/* Filter Section */}
-      <section className="py-12 bg-background sticky top-20 z-40 border-b border-border">
+      <section className="py-6 bg-transparent sticky top-28 z-40">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
@@ -125,9 +125,9 @@ const Work = () => {
           </div>
         </div>
       </section>
-
+      
       {/* Projects Grid */}
-      <section className="py-20">
+      <section className="pt-8 pb-20">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => (

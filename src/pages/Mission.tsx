@@ -144,7 +144,7 @@ const Mission = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 bg-gradient-to-b from-background to-primary/5">
+     <section className="pt-4 pb-16 bg-gradient-to-b from-background to-primary/5">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <Users className="w-12 h-12 text-primary mx-auto mb-4" />
