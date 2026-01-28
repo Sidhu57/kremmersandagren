@@ -4,9 +4,13 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { GraduationCap, Activity, Users, Leaf } from "lucide-react";
+import { useRef } from "react";
+
 
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState("all");
+  const projectsRef = useRef<HTMLDivElement | null>(null);
+
 
   const categories = [
     { id: "all", label: "All Programs" },
@@ -14,7 +18,6 @@ const Work = () => {
     { id: "healthcare", label: "Healthcare" },
     { id: "community", label: "Community Welfare" },
   ];
-
   const projects = [
     {
       category: "education",
@@ -113,21 +116,28 @@ const Work = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
-              <Button
-                key={category.id}
-                variant={activeFilter === category.id ? "default" : "outline"}
-                onClick={() => setActiveFilter(category.id)}
-                className={activeFilter === category.id ? "bg-primary text-white" : ""}
-              >
-                {category.label}
-              </Button>
+              <Button key={category.id}
+               variant={activeFilter === category.id ? "default" : "outline"} 
+               onClick={() => {
+                 setActiveFilter(category.id);
+                 setTimeout(() => {
+                  if (projectsRef.current) {
+                     const yOffset = -140;
+                     const y = projectsRef.current.getBoundingClientRect().top +window.pageYOffset +yOffset;
+                     window.scrollTo({ top: y, behavior: "smooth" });
+                     }
+                    }, 100);
+                  }}
+                  className={activeFilter === category.id ? "bg-primary text-white" : ""} >
+                 {category.label}
+                 </Button>
             ))}
           </div>
         </div>
       </section>
       
       {/* Projects Grid */}
-      <section className="pt-8 pb-20">
+      <section ref={projectsRef} className="pt-8 pb-20">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => (
