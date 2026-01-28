@@ -119,28 +119,54 @@ const About = () => {
 
             {/* Our Story Content - Updated with Original Content */}
             <div className="space-y-6 text-muted-foreground leading-relaxed text-sm md:text-base">
-              <div className="bg-muted/50 p-6 rounded-lg border-l-4 border-primary">
-                <p className="font-bold text-lg mb-4">For KREMMER SANDEGREN FOUNDATION (KSF)</p>
-                <p className="font-semibold mb-2">
-                  [KSF - A Lutheran Christian Evangelical Missionary Service in India under Societies Registration Act 1860 and Madras Act (Madras Amendment) Act XXIV of 1954 - Regn. No: 5/1957, Dt. 1st May 1957 (Founded on 25th March 1957)
-                </p>
-                <p className="font-semibold mb-2">
-                  FOUNDED BY Indian Born Swedish Missionary REV. FR. J. SANDEGREN
-                </p>
-                <p className="font-semibold mb-2">
-                  Previously Represented By Its First Indian Successor Cum Dean<br />
-                  Rev. A. DHARMARAJ, S/o. Antonysamy Pillai
-                </p>
-                <p className="font-semibold mb-2">
-                  Presently Represented By<br />
-                  Rev. D. Abraham Doss, M.A., S/o. A. Dharmaraj, President, KSF<br />
-                  Mr. M. Arockiya Leo, S/o. Mariyam Soosai, Vice President, KSF
-                </p>
-                <p className="font-semibold">
-                  Previously functioned in Leo Lodge, Pattukottai, now functioning at<br />
-                  No: 16, Bishop Tank Street, Puthur, Trichy - 620 017]
-                </p>
-              </div>
+              <div className="space-y-8 text-muted-foreground leading-relaxed text-sm md:text-base">
+                {/* Title */}
+                 <h3 className="text-lg font-bold text-primary">
+                  For KREMMER SANDEGREN FOUNDATION (KSF)
+                  </h3>
+                  {/* Registration Info */}
+                  <div className="space-y-2 font-semibold">
+                    <p>
+                      KSF – A Lutheran Christian Evangelical Missionary Service in India
+                      </p>
+                      <p>
+                        Registered under Societies Registration Act 1860,
+                        Madras Act (Madras Amendment) Act XXIV of 1954
+                        </p>
+                        <p>
+                        Regn. No: 5/1957 | Dt. 1st May 1957 | Founded on 25th March 1957
+                        </p>
+                        </div>
+                        {/* Founder */}
+                        <div className="space-y-1 font-semibold">
+                        <p className="uppercase tracking-wide">Founder</p>
+                        <p>Indian Born Swedish Missionary</p>
+                        <p>Rev. Fr. J. Sandegren</p>
+                        </div>
+                        {/* Previous Leadership */}
+                        <div className="space-y-1 font-semibold">
+                          <p className="uppercase tracking-wide">First Indian Successor & Dean</p>
+                          <p>Rev. A. Dharmaraj</p>
+                          <p>S/o. Antonysamy Pillai</p>
+                          </div>
+                          {/* Present Leadership */}
+                          <div className="space-y-1 font-semibold">
+                            <p className="uppercase tracking-wide">Present Leadership</p>
+                            <p>Rev. D. Abraham Doss, M.A.</p>
+                            <p>President, KSF | S/o. A. Dharmaraj</p>
+                            <p>Mr. M. Arockiya Leo</p>
+                            <p>Vice President, KSF | S/o. Mariyam Soosai</p>
+                            </div>
+                            {/* Address */}
+                            <div className="space-y-1 font-semibold">
+                              <p className="uppercase tracking-wide">Administrative Office</p>
+                              <p>Previously at Leo Lodge, Pattukottai</p>
+                              <p>Now functioning at:</p>
+                              <p>No: 16, Bishop Tank Street</p>
+                              <p>Puthur, Trichy – 620 017</p>
+                              </div>
+                              </div>
+
 
               <h3 className="text-lg font-bold mt-6 mb-3 text-primary">PREFACE</h3>
               <p className="font-semibold">
