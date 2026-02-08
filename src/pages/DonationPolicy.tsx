@@ -20,7 +20,7 @@ const DonationPolicy = () => {
         <Navigation />
       
       {/* Hero Section with Background Video */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-32">
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-36 md:pt-40">
         <div className="absolute inset-0">
           <video
             autoPlay
@@ -36,22 +36,22 @@ const DonationPolicy = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-secondary/90" />
         </div>
         
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
-            <Heart className="w-16 h-16 text-white mx-auto mb-6" />
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Donation Policy
-            </h1>
-            <p className="text-xl text-white/95 leading-relaxed">
-              Understanding how your generous contributions make a difference and our commitment to transparency.
-            </p>
-          </div>
-        </div>
+       <div className="container mx-auto px-4 relative z-10 -mt-8 md:-mt-12">
+  <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
+    <Heart className="w-16 h-16 text-white mx-auto mb-6" />
+    <h1 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      Donation Policy
+    </h1>
+    <p className="text-xl text-white/95 leading-relaxed">
+      Understanding how your generous contributions make a difference and our commitment to transparency.
+    </p>
+  </div>
+</div>
       </section>
 
       {/* Content */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="relative pt-20 pb-24">
+        <div className="max-w-5xl mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <Card className="border-none shadow-lg mb-8">
               <CardContent className="p-8 md:p-12 space-y-8">

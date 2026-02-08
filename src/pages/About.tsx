@@ -47,21 +47,22 @@ const About = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/90 to-secondary/95" />
         </div>
         
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
-            <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-foreground via-foreground/80 to-foreground/60 bg-clip-text text-transparent mb-4">
-              About Us
-            </h1>
-            <p className="text-base md:text-lg text-foreground/90 leading-relaxed mb-3">
-              Learn about our journey, mission, and the dedicated team working to make a difference.
-            </p>
-            <div className="text-xs md:text-sm text-foreground/90 space-y-2 mt-6 text-left max-w-xl mx-auto pl-10">
-              <p className="font-medium">Registration No. 5/1957 (Tanjore, 01-May-1957)</p>
-              <p className="font-medium">Amended SL. 07/2015 (Trichy, 19-Nov-2015)</p>
-              <p className="font-bold text-sm md:text-base">12A & 80G approved - 50% tax deduction eligible</p>
-            </div>
-          </div>
-        </div>
+        <div className="container mx-auto px-4 relative z-10 -mt-20">
+        <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
+        <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-foreground via-foreground/80 to-foreground/60 bg-clip-text text-transparent mb-4">
+      About Us
+    </h1>
+    <p className="text-base md:text-lg text-foreground/90 leading-relaxed mb-3">
+      Learn about our journey, mission, and the dedicated team working to make a difference.
+    </p>
+    <div className="text-xs md:text-sm text-foreground/90 space-y-2 mt-6 text-left max-w-xl mx-auto pl-10">
+      <p className="font-medium">Registration No. 5/1957 (Tanjore, 01-May-1957)</p>
+      <p className="font-medium">Amended SL. 07/2015 (Trichy, 19-Nov-2015)</p>
+      <p className="font-bold text-sm md:text-base">12A & 80G approved - 50% tax deduction eligible</p>
+    </div>
+  </div>
+</div>
+
       </section>
 
       {/* Our Story with Leadership */}
@@ -139,19 +140,19 @@ const About = () => {
                         </div>
                         {/* Founder */}
                         <div className="space-y-1 font-semibold">
-                        <p className="uppercase tracking-wide">Founder</p>
+                        <h3 className="text-lg font-bold text-primary">Founder</h3>
                         <p>Indian Born Swedish Missionary</p>
                         <p>Rev. Fr. J. Sandegren</p>
                         </div>
                         {/* Previous Leadership */}
                         <div className="space-y-1 font-semibold">
-                          <p className="uppercase tracking-wide">First Indian Successor & Dean</p>
+                          <h3 className="text-lg font-bold text-primary">First Indian Successor & Dean</h3>
                           <p>Rev. A. Dharmaraj</p>
                           <p>S/o. Antonysamy Pillai</p>
                           </div>
                           {/* Present Leadership */}
                           <div className="space-y-1 font-semibold">
-                            <p className="uppercase tracking-wide">Present Leadership</p>
+                            <h3 className="text-lg font-bold text-primary">Present Leadership</h3>
                             <p>Rev. D. Abraham Doss, M.A.</p>
                             <p>President, KSF | S/o. A. Dharmaraj</p>
                             <p>Mr. M. Arockiya Leo</p>
@@ -159,7 +160,7 @@ const About = () => {
                             </div>
                             {/* Address */}
                             <div className="space-y-1 font-semibold">
-                              <p className="uppercase tracking-wide">Administrative Office</p>
+                              <h3 className="text-lg font-bold text-primary">Administrative Office</h3>
                               <p>Previously at Leo Lodge, Pattukottai</p>
                               <p>Now functioning at:</p>
                               <p>No: 16, Bishop Tank Street</p>

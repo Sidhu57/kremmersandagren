@@ -2,8 +2,32 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const PrivacyPolicy = () => {
+  const [bgOpacity, setBgOpacity] = useState(0.85);
+  useEffect(() => {
+    const handleScroll = () => {
+    const scrollY = window.scrollY;
+
+    const fadeStart = 200;   // start fading after intro
+    const fadeEnd = 900;     // fully transparent after this scroll
+
+    let opacity = 0.85;
+
+    if (scrollY > fadeStart) {
+      opacity =
+        0.85 -
+        Math.min((scrollY - fadeStart) / fadeEnd, 1) * 0.85;
+    }
+
+    setBgOpacity(opacity);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
   return (
     <div className="min-h-screen bg-background relative">
       {/* Full Page Background Image */}
@@ -47,7 +71,15 @@ const PrivacyPolicy = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Card className="border-none shadow-lg">
+            <Card
+  className="border-none shadow-none transition-all duration-300"
+  style={{
+    backgroundColor: `rgba(255, 255, 255, ${bgOpacity})`,
+    backdropFilter: "blur(6px)",
+  }}
+>
+
+
               <CardContent className="p-8 md:p-12 space-y-8">
                 <div>
                   <p className="text-sm text-muted-foreground mb-8">Last Updated: March 1, 2024</p>

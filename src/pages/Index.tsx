@@ -107,29 +107,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Impact Stats Section */}
-      <section className="py-24 bg-gradient-to-br from-primary to-secondary relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptMCAyYy0yLjIxIDAtNCAxLjc5LTQgNHMxLjc5IDQgNCA0IDQtMS43OSA0LTQtMS43OS00LTQtNHoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjA1Ii8+PC9nPjwvc3ZnPg==')] opacity-20" />
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-               { number: "40+ Years", label: "Serving Rural Communities" },
-              { number: "100+", label: "Villages Reached" },
-              { number: "2,000+", label: "Self-Help Groups" },
-              { number: "15,000+", label: "Families Empowered" },
-            ].map((stat, index) => (
-              <div key={index} className="text-center animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="text-4xl md:text-5xl font-bold text-warm-accent mb-2">{stat.number}</div>
-                <div className="text-warm-accent/90 text-sm md:text-base font-medium">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-24">
+      <section className="py-16 -mt-24">
         <div className="container mx-auto px-4">
           <Card className="bg-gradient-to-br from-primary/10 to-secondary/10 border-none">
             <CardContent className="p-12 text-center">
@@ -156,6 +135,27 @@ const Index = () => {
         </div>
       </section>
 
+
+      {/* Impact Stats Section */}
+      <section className="py-8 bg-gradient-to-br from-primary to-secondary relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptMCAyYy0yLjIxIDAtNCAxLjc5LTQgNHMxLjc5IDQgNCA0IDQtMS43OSA0LTQtMS43OS00LTQtNHoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjA1Ii8+PC9nPjwvc3ZnPg==')] opacity-20" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+               { number: "40+ Years", label: "Serving Rural Communities" },
+              { number: "100+", label: "Villages Reached" },
+              { number: "2,000+", label: "Self-Help Groups" },
+              { number: "15,000+", label: "Families Empowered" },
+            ].map((stat, index) => (
+              <div key={index} className="text-center animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="text-4xl md:text-5xl font-bold text-warm-accent mb-2">{stat.number}</div>
+                <div className="text-warm-accent/90 text-sm md:text-base font-medium">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
         <Footer />
       </div>
     </div>
