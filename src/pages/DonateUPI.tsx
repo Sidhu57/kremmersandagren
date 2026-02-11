@@ -10,8 +10,8 @@ const DonateUPI = () => {
   const [address, setAddress] = useState("");
 
 
-  const upiId = "sasimeen07-1@okicici";
-  const payeeName = "Shanmugammal PostOffice";
+  const upiId = "kremmersandegrenfoundation@upi";
+  const payeeName = "Kremmer Sandegren Foundation";
   const note = "Donation Support";
 
   const isFormValid =
