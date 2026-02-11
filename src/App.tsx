@@ -18,6 +18,8 @@ import TermsOfUse from "./pages/TermsOfUse";
 import Donate from "./pages/Donate";
 import DonationPolicy from "./pages/DonationPolicy";
 import NotFound from "./pages/NotFound";
+import DonateUPI from "@/pages/DonateUPI";
+
 
 const queryClient = new QueryClient();
 
@@ -40,6 +42,8 @@ const App = () => (
           <Route path="/audited-reports" element={<AuditedReports />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-use" element={<TermsOfUse />} />
+          <Route path="/donate/upi" element={<DonateUPI />} />
+
 
           {/* ✅ DONATE FLOW */}
           <Route path="/donate" element={<Donate />} />
